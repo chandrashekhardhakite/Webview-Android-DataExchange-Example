@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">QR and BarCode reader</string>
+    <string name="scan">Scan from Native Android button</string>
+</resources>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR and BarCode Scanner using both Android Native and JavaScript Functionality</title>
+</head>
+
+<body>
+Hello Android! <br/>
+<br/>
+The above button in Native Android, while the below one is JavaScript button. <br/>
+<br/>
+<input type="button" value="Scan from JavaScript button" onClick="scan()" />
+<br/>
+<br/>
+<br/>
+Below button will show the latest scan result, regardless read through Native Android button, or JavaScript button, and will display the result as Native Android Toast.
+<br/>
+<br/>
+<input type="button" value="Show Scan result" onClick="showScanResult()" />
+</body>
+
+<script type="text/javascript">
+ alert("Hello! I am an alert box!");
+    function scan() {
+
+       example.scanJS();
+    }
+
+    function showScanResult() {
+
+        example.showToast("passing data to Android layer");
+
+    }
+
+    function init(val){
+// Do whatever you want with your parameter val
+    alert("Hello! I am an alert box!");
+
+    }
+ </script>
+</html>

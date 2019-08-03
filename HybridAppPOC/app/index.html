@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR and BarCode Scanner using both Android Native and JavaScript Functionality</title>
+</head>
+
+<body>
+Hello Android! <br/>
+<br/>
+The above button in Native Android, while the below one is JavaScript button. <br/>
+<br/>
+<input type="button" value="Scan from JavaScript button" onClick="scan()" />
+<br/>
+<br/>
+<br/>
+Below button will show the latest scan result, regardless read through Native Android button, or JavaScript button, and will display the result as Native Android Toast.
+<br/>
+<br/>
+<input type="button" value="Show Scan result" onClick="showScanResult()" />
+</body>
+
+<script type="text/javascript">
+    function scan() {
+       fonix.scanJS();
+    }
+
+    function showScanResult() {
+        var scanResult = fonix.scanResult();
+        // (!scanResult) equal === null or === undefined
+        if(!scanResult)fonix.showToast("Nothing had been scanned");
+           else fonix.showToast(fonix.scanResult());
+    }
+ </script>
+</html>
